@@ -22,11 +22,7 @@ export default class Github extends ApiBase {
         "role": "system"
       },
       {
-        "content": `I have the following code in the selection:\n\`\`\`${languageId}\n// FILEPATH: ${filepath.replace('file://', '')}\n${contents}`,
-        "role": "user"
-      },
-      {
-        "content": request,
+        "content": `${request}. I have the following code in the selection:\n\`\`\`${languageId}\n// FILEPATH: ${filepath.replace('file://', '')}\n${contents}`,
         "role": "user"
       }
     ]
