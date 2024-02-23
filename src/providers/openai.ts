@@ -44,7 +44,7 @@ export default class Github extends ApiBase {
     const data = await this.request({
       method: "POST",
       body,
-      endpoint: "/v1/chat/completions",
+      endpoint: "/chat/completions",
       timeout: 10000
     })
 
@@ -77,7 +77,7 @@ export default class Github extends ApiBase {
     const data = await this.request({
       method: "POST",
       body,
-      endpoint: "/v1/chat/completions"
+      endpoint: "/chat/completions"
     })
 
     return types.Completion.fromResponse(data)
